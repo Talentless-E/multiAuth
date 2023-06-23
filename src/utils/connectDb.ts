@@ -31,6 +31,7 @@ async function connectDb() {
         return mongoose;
     }).catch((err) => {
         console.log(err as Error)
+        console.log(`Something went wrong ${err.message}`)
     })
     }
     cached.connection = await cached.promise;
