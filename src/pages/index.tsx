@@ -3,7 +3,6 @@ import { NextPageContext } from "next"
 
 export default function Home() {
   const { data:session } = useSession()
-  console.log(session)
   return (
     <>
     <h1 className="text-gray-500 text-4xl bg-white">
