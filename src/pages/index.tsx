@@ -4,7 +4,6 @@ import Image from "next/image";
 
 export default function Home() {
    const { data: session } = useSession();
-   let imgURL = session?.user?.image;
    return (
       <>
          <h1 className="text-gray-500 text-4xl bg-white">
@@ -12,7 +11,7 @@ export default function Home() {
          </h1>
          {session ? (
             <Image
-               src={imgURL}
+               src={String(session?.user?.image)}
                width={128}
                height={128}
                alt=""
